@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2" method="upgrade">
+	<name>COM_STUDENTMANAGER</name>
+	<creationDate>October 05, 2014</creationDate>
+	<author>Sander Crombeen</author>
+	<authorEmail>sander4000@gmail.com</authorEmail>
+	<authorUrl>voipcentral.nl</authorUrl>
+	<copyright>Copyright (C) 2014. All Rights Reserved</copyright>
+	<license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>0.0.1</version>
+	<description><![CDATA[
+		<h1>Student Manager (v.0.0.1)</h1>
+		<div style="clear: both;"></div>
+		<p>Student Manager For Schools. <strong>Built for Joomla 3.2.</strong></p>
+		<p>Created by <a href="http://voipcentral.nl" target="_blank">Sander Crombeen | voipcentral.nl</a>
+	]]></description>
+
+	<!-- Runs on install; New in Joomla 1.5 -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<!-- Runs on uninstall; New in Joomla 1.5 
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>-->
+
+	<!-- Runs on install/uninstall/update; New in Joomla 2.5 -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Update Schema; New in Joomla 2.5 -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>studentmanager.php</filename>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<administration>
+		<menu>COM_STUDENTMANAGER_MENU</menu>
+		<submenu>
+			<!-- Instead of link you can specify individual link attributes -->
+			<menu option="com_studentmanager" view="studentmanager">COM_STUDENTMANAGER_MENU_STUDENTMANAGER</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>studentmanager.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_studentmanager.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_studentmanager.sys.ini</language>
+                        <language tag="nl-NL">language/nl-NL/nl-NL.com_studentmanager.ini</language>
+			<language tag="nl-NL">language/nl-NL/nl-NL.com_studentmanager.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

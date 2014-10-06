@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_studentmanager/models/rules"
+	addfieldpath="/administrator/components/com_studentmanager/models/fields"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+		/>
+                <field
+                        name="classroomid"
+                        type="helloworld"
+                        label="COM_STUDENTMANAGER_STUDENTMANAGER_FORM_LABEL_CLASSROOMID"
+                        description="COM_STUDENTMANAGER_STUDENTMANAGER_FORM_LABEL_CLASSROOMID_DESC"
+                />
+
+		<field
+			name="date_created"
+			type="hidden"
+		/>
+		<field
+			name="user_created"
+			type="hidden"
+		/>
+		<field
+			class="inputbox validate-studentid"
+			default=""
+			description="COM_STUDENTMANAGER_STUDENTMANAGER_FORM_LABEL_STUDENT_ID_DESC"
+			label="COM_STUDENTMANAGER_STUDENTMANAGER_FORM_LABEL_STUDENT_ID"
+			name="studentid"
+			required="true"
+			size="40"
+			type="numbers"
+			validate="studentid"
+		/>
+		<field
+			class="inputbox validate-studentname"
+			default=""
+			description="COM_STUDENTMANAGER_STUDENTMANAGER_FORM_LABEL_STUDENT_NAME_DESC"
+			label="COM_STUDENTMANAGER_STUDENTMANAGER_FORM_LABEL_STUDENT_NAME"
+			name="studentname"
+			required="true"
+			size="40"
+			type="text"
+			validate="studentname"
+		/>
+	
+		<field
+			default=""
+			description=""
+			label="Parent_id"
+			name="parentid"
+			type="hidden"
+		/>
+	</fieldset>
+</form>
